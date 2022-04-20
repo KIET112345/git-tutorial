@@ -11,6 +11,8 @@ export default function AuthProvider({ children }) {
     const unsubscribed = auth.onAuthStateChanged((user) => {
       // console.log({ user });
       if (user) {
+        console.log("user", user);
+        console.log("VO DAY");
         const { displayName, email, uid, photoURL } = user;
         setUser({
           displayName,

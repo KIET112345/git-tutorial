@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Avatar, Typography } from "antd";
 import styled from "styled-components";
 import { auth, db } from "../../firebase/config";
-import AuthProvider from "../../context/AuthProvider";
+import { AuthContext } from "../../context/AuthProvider";
 const WrapperStyled = styled.div`
   display: flex;
   justify-content: space-between;
@@ -15,9 +15,9 @@ const WrapperStyled = styled.div`
 `;
 
 export default function UserInfor() {
-  const {
-    user: { displayName, photoURL },
-  } = React.useContext(AuthProvider);
+  const data = React.useContext(AuthContext);
+  console.log({ data });
+  const { displayName, photoURL } = React.useContext(AuthContext);
 
   // React.useEffect(() => {
   //   db.collection("users").onSnapshot((snapshot) => {
