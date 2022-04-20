@@ -3,6 +3,7 @@ import Login from "./components/Login";
 import ChatRoom from "./components/ChatRoom";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import AuthProvider from "./context/AuthProvider";
+//console.log("test")
 function App() {
   return (
     <BrowserRouter>
